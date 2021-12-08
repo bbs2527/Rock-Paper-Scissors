@@ -8,6 +8,28 @@
 </head>
 <body>
 
-<script></script>    
+<script>
+
+function random_selection(computerPlay){
+
+    // Generate a random array item from rock, paper, scissors
+    const randomIndex = Math.floor(Math.random() * computerPlay.length);
+
+    //Get random item from array
+    const randomItem = computerPlay[randomIndex];
+
+    return randomItem;
+}
+
+const computerPlayChoice = ['rock', 'paper', 'scissors'];
+
+const computerResult = random_selection(computerPlayChoice);
+
+console.log(computerResult);
+
+
+
+
+</script>    
 </body>
 </html>

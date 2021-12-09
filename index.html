@@ -10,6 +10,8 @@
 
 <script>
 
+
+//Computer chooses a random selection of Rock, Paper, or Scissors
 function computerPlay() {
   var random = Math.floor(Math.random() * 3);
   if (random == 0) {
@@ -21,6 +23,7 @@ function computerPlay() {
   }
 }
 
+//Player chooses Rock, Paper, or Scissors
 function playRound(playerSelection, computerSelection) {
   
  playerSelection = playerSelection.toLowerCase();
@@ -48,7 +51,7 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-
+//Game loop
 function gameScore() {
   var playerScore = 0;
   var computerScore = 0;
@@ -65,24 +68,13 @@ function gameScore() {
 }
 
 
-/*
-fucntion game() {
-    let result = playRound()
+//Keep score of game
 
-    if (result === playerSelection) {
-        playerScore++
-    } else if (result === computerSelection) {
-        computerScore++
-    }else {
-        console.log("It's a tie!")
-    }
 
-    if (playerScore === 5) {
-        console.log("You win!")
-    } else if (computerScore === 5) {
-        console.log("You lose!")
-    }
-}*/
+
+//Display score
+
+//Display winner
 
 </script>    
 </body>

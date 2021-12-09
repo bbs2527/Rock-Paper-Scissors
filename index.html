@@ -10,6 +10,45 @@
 
 <script>
 
+function computerPlay() {
+  var random = Math.floor(Math.random() * 3);
+  if (random == 0) {
+    return "rock";
+  } else if (random == 1) {
+    return "paper";
+  } else {
+    return "scissors";
+  }
+}
+
+function playRound(playerSelection, computerSelection) {
+  if (playerSelection == computerSelection) {
+    return "It's a tie!";
+    } else if (playerSelection == "rock") {
+      if (computerSelection == "paper") {
+        return "You lose! Paper beats rock.";
+      } else {
+        return "You win! Rock beats scissors.";
+      }
+    } else if (playerSelection == "paper") {
+      if (computerSelection == "scissors") {
+        return "You lose! Scissors beats paper.";
+      } else {
+        return "You win! Paper beats rock.";
+      }
+    } else if (playerSelection == "scissors") {
+      if (computerSelection == "rock") {
+        return "You lose! Rock beats scissors.";
+      } else {
+        return "You win! Scissors beats paper.";
+      }
+    }
+}
+
+/* 
+  This is the array that will hold the possible choices for the computer.
+  It will be populated with the possible choices.
+  ---------------------------------------------------------------
 function random_selection(computerPlay){
 
     // Generate a random array item from rock, paper, scissors
@@ -26,9 +65,7 @@ const computerPlayChoice = ['rock', 'paper', 'scissors'];
 const computerResult = random_selection(computerPlayChoice);
 
 console.log(computerResult);
-
-
-
+*/
 
 </script>    
 </body>

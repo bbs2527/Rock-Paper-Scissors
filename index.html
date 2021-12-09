@@ -22,6 +22,9 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
+  
+ playerSelection = playerSelection.toLowerCase();
+
   if (playerSelection == computerSelection) {
     return "It's a tie!";
     } else if (playerSelection == "rock") {
@@ -45,27 +48,6 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-/* 
-  This is the array that will hold the possible choices for the computer.
-  It will be populated with the possible choices.
-  ---------------------------------------------------------------
-function random_selection(computerPlay){
-
-    // Generate a random array item from rock, paper, scissors
-    const randomIndex = Math.floor(Math.random() * computerPlay.length);
-
-    //Get random item from array
-    const randomItem = computerPlay[randomIndex];
-
-    return randomItem;
-}
-
-const computerPlayChoice = ['rock', 'paper', 'scissors'];
-
-const computerResult = random_selection(computerPlayChoice);
-
-console.log(computerResult);
-*/
 
 </script>    
 </body>

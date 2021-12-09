@@ -49,6 +49,41 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
+function gameScore() {
+  var playerScore = 0;
+  var computerScore = 0;
+  for (let i = 0; i < 5; i++) {
+    var playerSelection = prompt("Rock, paper, or scissors?");
+    var computerSelection = computerPlay();
+    var result = playRound(playerSelection, computerSelection);
+    console.log(result);
+
+    if(playerSelection === 5 || computerSelection === 5) {
+        break
+    }
+  }
+}
+
+
+/*
+fucntion game() {
+    let result = playRound()
+
+    if (result === playerSelection) {
+        playerScore++
+    } else if (result === computerSelection) {
+        computerScore++
+    }else {
+        console.log("It's a tie!")
+    }
+
+    if (playerScore === 5) {
+        console.log("You win!")
+    } else if (computerScore === 5) {
+        console.log("You lose!")
+    }
+}*/
+
 </script>    
 </body>
 </html>

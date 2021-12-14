@@ -69,12 +69,32 @@ function gameScore() {
 
 
 //Keep score of game
-
+function updateScores(result, points) {
+    if (result === 1) {
+        points.player++;
+    } else if (result === 2) {
+        points.computer++;
+    } if (result === 0) {
+        points.ties++;
+    }
+}
 
 
 //Display score
+function displayScores(points) {
+    console.log(`Player: ${points.player} Computer: ${points.computer} Ties: ${points.ties}`);
+}
 
 //Display winner
+function displayWinner(points) {
+    if (points.player > points.computer) {
+        console.log("Player wins!");
+    } else if (points.player < points.computer) {
+        console.log("Computer wins!");
+    } else {
+        console.log("It's a tie!");
+    }
+}
 
 </script>    
 </body>
